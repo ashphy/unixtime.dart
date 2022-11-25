@@ -1,39 +1,46 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# UnixTime.dart
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+This extension provides a way to access the UNIX time (seconds)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+## Installation
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+With Dart:
 
-## Features
+```sh
+ $ dart pub add time
+```
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+With Flutter:
 
-## Getting started
+```sh
+$ flutter pub add time
+```
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Import
+
+```dart
+import 'package:unixtime/unixtime.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+To get the `DateTime` from UNIX time.
 
 ```dart
-const like = 'sample';
+final datetime = 1669361095.toUnixTime();
+// => 2022-11-25 16:24:55.000
 ```
 
-## Additional information
+You can create a UTC timezone with `isUtc` option.
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```dart
+final datetime = 1669361095.toUnixTime(isUtc: true);
+// => 2022-11-25 07:24:55.000Z
+```
+
+To get UNIX timestamp from `DateTime`.
+
+```dart
+DateTime.now().unixtime
+// => 1669361095
+```
