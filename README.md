@@ -7,13 +7,13 @@ This extension provides a way to access the UNIX time (seconds)
 With Dart:
 
 ```sh
- $ dart pub add time
+ $ dart pub add unixtime
 ```
 
 With Flutter:
 
 ```sh
-$ flutter pub add time
+$ flutter pub add unixtime
 ```
 
 Import
