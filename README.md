@@ -1,4 +1,4 @@
-# UnixTime.dart
+# UnixTime.dart [![Build](https://github.com/ashphy/unixtime.dart/actions/workflows/build.yml/badge.svg)](https://github.com/ashphy/unixtime.dart/actions/workflows/build.yml)
 
 This extension provides a way to access the UNIX time (seconds)
 
